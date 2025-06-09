@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
+import Map from './components/Map/Map';
+import Usuarios from './components/Usuarios/Usuarios';
 
 const App = () => {
 
@@ -8,8 +10,12 @@ const App = () => {
   return (
     //Render
     <>
-    <NavBar/>
+    {/* <NavBar/> */}
       <h1>Clase 3</h1>
+    {/* <Map/> */}
+    <Usuarios/>
+    {/* <NavBar/> */}
+    {/* <Map/> */}
     </>
   )
 }
