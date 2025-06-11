@@ -20,3 +20,12 @@ export const getProductos = () => {
     }, 2000); // Simula un retraso de 2 segundos
   });
 }
+
+export const getUnProducto = (id) => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      const productoBuscado = productos.find(prod => prod.id === id);
+      resolve(productoBuscado);
+    }, 2000); // Simula un retraso de 2 segundos
+  });
+}

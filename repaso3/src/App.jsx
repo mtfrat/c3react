@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar';
 import Map from './components/Map/Map';
 import Usuarios from './components/Usuarios/Usuarios';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 const App = () => {
 
@@ -16,6 +17,7 @@ const App = () => {
     {/* <Map/>
     <Usuarios/> */}
     <ItemListContainer/>
+    <ItemDetailContainer/>
     </>
   )
 }
