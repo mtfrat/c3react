@@ -3,13 +3,15 @@ const productos = [
     id: 1,
     nombre: "Auriculares",
     precio: 39.99,
-    img: "/images/auriculares.jpg"
+    img: "https://placedog.net/400/387?id=41",
+    idCat: "2"
   },
   {
     id: 2,
     nombre: "Teclado",
     precio: 59.99,
-    img: "/images/teclado.jpg"
+    img: "https://placedog.net/400/438?id=33",
+    idCat: "3"
   }
 ];
 
@@ -26,6 +28,15 @@ export const getUnProducto = (id) => {
     setTimeout(() => {
       const productoBuscado = productos.find(prod => prod.id === id);
       resolve(productoBuscado);
-    }, 2000); // Simula un retraso de 2 segundos
+    }, 100); // Simula un retraso de 2 segundos
+  });
+}
+
+export const getProductosPorCategoria = (idCategoria) => {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      const productosFiltrados = productos.filter(prod => prod.idCat === idCategoria);
+      resolve(productosFiltrados);
+    }, 100); // Simula un retraso de 2 segundos
   });
 }

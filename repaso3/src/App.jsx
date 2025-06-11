@@ -5,6 +5,7 @@ import Map from './components/Map/Map';
 import Usuarios from './components/Usuarios/Usuarios';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const App = () => {
 
@@ -12,12 +13,18 @@ const App = () => {
   return (
     //Render
     <>
-    <NavBar/> 
-      <h1>Clase 3</h1>
+    <BrowserRouter>
+      <NavBar/>
+      <Routes>
+        <Route path="/" element={<ItemListContainer/>} />
+        <Route path="/categoria/:idCategoria" element={<ItemListContainer />} />
+        <Route path="/catgoria/:idItem" element={<ItemDetailContainer />} />
+      </Routes>
+    </BrowserRouter> 
     {/* <Map/>
     <Usuarios/> */}
-    <ItemListContainer/>
-    <ItemDetailContainer/>
+    
+    
     </>
   )
 }
